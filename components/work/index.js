@@ -15,7 +15,7 @@ const Work = ({fields}) => {
             <div className="w-28 h-28 bg-green-900 absolute pad">
               <Pad {...fields}/>
             </div>
-            <div className="w-28 h-28 bg-yellow-900 absolute computer">
+            <div className="absolute computer">
               <Computer {...fields}/>
             </div>
             <div className="w-28 h-28 bg-red-900 absolute phone">
