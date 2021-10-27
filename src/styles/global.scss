@@ -1,0 +1,20 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+$mainblack: #22262b;
+$amain: #fbb053;
+$grisclaro: #e0e2e2;
+$display: #abadc6;
+$item: #d1c9bf;
+$codred: #ac5e47;
+
+@import 'computer';
+@import 'pad';
+@import 'phone';
+@import 'works-info';
