@@ -1,17 +1,10 @@
 .computer{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    .comp{
-        height: 194px;
-        margin-bottom: 1em;
-        
-        
+    top: 8%;
+    left: 9%;
         .monitor{
             position: relative;
-            width: 18em;
-            height: 10.5em;
+            width: 23em;
+            height: 15.5em;
             display: block;
             border-radius: 10px 10px 0px 0px;
             padding: 9px;
@@ -19,6 +12,44 @@
             background-color: black;
             position: relative;
             box-shadow: 1em -1em 2em 0.2em rgba(0, 0, 0, 0.216);
+
+            .browser__bar{
+                height: 6%;
+                background: #333;
+                
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                
+            
+                .ball{
+                    height: 5.5px;
+                    margin-left: .375em;
+                    width: 5.5px;
+                    background: red;
+                    border-radius: 100%;
+                    position: relative;
+            
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: .675em;
+                        height: 5.5px;
+                        width: 5.5px;
+                        background: yellow;
+                        border-radius: 100%;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 1.450em;
+                        height: 5.5px;
+                        width: 5.5px;
+                        background: green;
+                        border-radius: 100%;
+                    }
+                }
+            }
     
             .monitor__inner_content{
                 background: #333;
@@ -26,17 +57,7 @@
                 height: 100%;
                 position: relative;
         
-            
-                img{
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: top;
-                }
+
             }
     
             &:before {
@@ -63,19 +84,15 @@
 
             .base {
                 position: absolute;
-                bottom: -10px;
+                bottom: -13px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 21em;
-                height: 10px;
+                width: 27em;
+                height: 13px;
                 background: #fff;
                 display: block;
                 border-radius: 0px 0px 6px 6px;
                 box-shadow: 1em 0.4em 1em 0.2em rgba(0, 0, 0, 0.216);
             }  
         }
-    }
-    
-    
-    
 }

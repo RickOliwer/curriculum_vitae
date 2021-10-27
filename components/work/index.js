@@ -12,7 +12,7 @@ const Work = ({fields}) => {
         </section>
         <section className="col-span-2 w-full h-screen">
           <div className="bg-blue-900 w-full h-full relative">
-            <div className="w-28 h-28 bg-green-900 absolute pad">
+            <div className="absolute pad">
               <Pad {...fields}/>
             </div>
             <div className="absolute computer">

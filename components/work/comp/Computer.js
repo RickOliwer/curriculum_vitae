@@ -1,17 +1,19 @@
+import Image from 'next/image'
+//import img from './images/wine-comp.png'
 const Computer = ({img_comp}) => {
 
     return (
-        <div className="comp">
+
             <div className="monitor">
                 <div className="browser__bar">
                     <div className="ball"></div>
                 </div>
                 <div className="monitor__inner_content">
-                    {img_comp}
+                    
+                    <Image layout="fill" src={`/images/comp/${img_comp}.png`} />
                 </div>
                 <div className="base"></div>
             </div>
-        </div>
     );
 }
  
