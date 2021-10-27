@@ -7,18 +7,18 @@ import Info from './comp/Info'
 const Work = ({fields}) => {
     return (
       <div className="w-full h-screen grid grid-cols-3">
-        <section className="col-span-1">
+        <section className="col-span-1 flex flex-col justify-center align-center info">
           <Info {...fields}/>
         </section>
         <section className="col-span-2 w-full h-screen">
-          <div className="bg-blue-900 w-full h-full relative">
+          <div className="w-full h-full relative">
             <div className="absolute pad">
               <Pad {...fields}/>
             </div>
             <div className="absolute computer">
               <Computer {...fields}/>
             </div>
-            <div className="w-28 h-28 bg-red-900 absolute phone">
+            <div className="absolute phone">
               <Phone {...fields}/>
             </div>
           </div>
