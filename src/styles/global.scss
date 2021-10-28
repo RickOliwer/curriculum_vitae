@@ -17,7 +17,20 @@ $display: #abadc6;
 $item: #d1c9bf;
 $codred: #ac5e47;
 
-@import 'computer';
-@import 'pad';
-@import 'phone';
-@import 'works-info';
+.main-container{
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+	width: 100vw;
+	article{
+		height: 100vh;
+		scroll-snap-align: start;
+	}
+}
+
+@import 'intro/intro';
+@import 'about/about';
+@import 'work/computer';
+@import 'work/pad';
+@import 'work/phone';
+@import 'work/works-info';

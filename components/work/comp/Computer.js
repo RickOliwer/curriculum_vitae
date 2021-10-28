@@ -10,7 +10,11 @@ const Computer = ({img_comp}) => {
                 </div>
                 <div className="monitor__inner_content">
                     
-                    <Image layout="fill" src={`/images/comp/${img_comp}.png`} />
+                    <Image 
+                        layout="fill" 
+                        src={`/images/comp/${img_comp}.png`} 
+                        priority
+                        />
                 </div>
                 <div className="base"></div>
             </div>

@@ -10,7 +10,8 @@ const Phone = ({img_phone}) => {
                     <div className="iphone__inner_content">
                         <Image 
                         layout="fill" 
-                        src={`/images/phone/${img_phone}.png`} 
+                        src={`/images/phone/${img_phone}.png`}
+                        priority
                         />
                     </div>
                 </div>  

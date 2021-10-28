@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import About from '../components/about'
 import Education from '../components/education'
 import Experiences from '../components/experiences'
@@ -10,10 +11,9 @@ export default function Home() {
   const works = myWorks()
   if (!works) return <div>Loading</div>
 
-
   return (
     
-    <main className="w-screen bg-gray-900">
+    <main className="w-screen overflow-hidden bg-gray-900 main-container">
       <article className="w-11/12 m-auto h-screen">
         <Intro />
 
@@ -30,7 +30,7 @@ export default function Home() {
      {
         works.map((work) => {
           
-          return <article key={work.id} className="article w-11/12 m-auto h-screen"><Work {...work}/></article>
+          return <Work key={work.id} {...work}/>
         })
       }
 

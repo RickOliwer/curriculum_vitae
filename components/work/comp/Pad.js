@@ -11,7 +11,8 @@ const Pad = ({img_pad}) => {
                   <div className="ipad__inner_content">
                     <Image 
                     layout="fill" 
-                    src={`/images/pad/${img_pad}.png`} 
+                    src={`/images/pad/${img_pad}.png`}
+                    priority 
                     />
                 </div>
           </div>  
