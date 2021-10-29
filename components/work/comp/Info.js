@@ -12,6 +12,7 @@ const Info = ({ Name, description, built_in, git_repo, website_url }) => {
                 >
                     <a 
                     className="inline-block mb-2"
+                    target="_blank"
                     >
                         Git Repo
                     </a>
@@ -21,7 +22,7 @@ const Info = ({ Name, description, built_in, git_repo, website_url }) => {
             <p>{description}</p>
             
             {website_url ? (
-                <Link href={`${website_url}`}><a className="web-button my-4" target="_blank">Web Site</a></Link>
+                <Link href={`${website_url}`}><a className="my-4 web-button" target="_blank">Web Site</a></Link>
             ) : null}
         </div>
     );

@@ -4,12 +4,7 @@ import Computer from './comp/Computer'
 import Phone from './comp/Phone'
 import Info from './comp/Info'
 import { useInView } from 'react-intersection-observer';
-import {
-  useViewportScroll,
-  motion,
-  useTransform,
-  useMotionValue
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Work = ({fields}) => {
   const [ref, inView] = useInView({
@@ -59,10 +54,10 @@ const Work = ({fields}) => {
   };
     return (
       
-      <article className="article w-11/12 m-auto h-screen relative">
-        <h3 className="text-gray-500 absolute top-10">project #{fields.int}</h3>
-        <div className="w-full h-screen grid grid-cols-3">
-          <section className="col-span-1 flex flex-col justify-center align-center info">
+      <article className="relative w-11/12 h-screen m-auto article">
+        <h3 className="absolute text-gray-500 top-10">project #{fields.int}</h3>
+        <div className="grid w-full h-screen grid-cols-3">
+          <section className="flex flex-col justify-center col-span-1 align-center info">
             <motion.div
               animate={inView ? 'visible' : 'hidden'}
               variants={infoVariants}
@@ -75,8 +70,8 @@ const Work = ({fields}) => {
             </motion.div>
 
           </section>
-          <section className="col-span-2 w-full h-screen">
-            <div className="w-full h-full relative">
+          <section className="w-full h-screen col-span-2">
+            <div className="relative w-full h-full">
               <motion.div 
                 animate={inView ? 'visible' : 'hidden'}
                 variants={padVariants}
