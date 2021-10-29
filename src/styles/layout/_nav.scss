@@ -1,0 +1,102 @@
+
+    .nav_button{
+
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+            .line{
+                width: 50px;
+                height: 5px;
+                background-color: #ecf0f1;
+                display: block;
+                margin: 8px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+    }
+
+    #nav_button.click{
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition-delay: 0.6s;
+        -o-transition-delay: 0.6s;
+        transition-delay: 0.6s;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+        .line{
+
+            &:nth-child(2){
+                width: 0px;
+            }
+            &:nth-child(1), &:nth-child(3){
+                -webkit-transition-delay: 0.3s;
+                -o-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+            }
+
+            &:nth-child(1){
+                -webkit-transform: translateY(13px);
+                -ms-transform: translateY(13px);
+                -o-transform: translateY(13px);
+                transform: translateY(13px);
+            }
+
+            &:nth-child(3){
+                -webkit-transform: translateY(-13px) rotate(90deg);
+                -ms-transform: translateY(-13px) rotate(90deg);
+                -o-transform: translateY(-13px) rotate(90deg);
+                transform: translateY(-13px) rotate(90deg);
+            }
+        }
+    }
+
+    .link_items{
+        position: fixed;
+        right: 0px;
+        height: 90vh;
+        top: 10vh;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 1s ease-in;
+        z-index: 1;
+
+            li{
+                opacity: 0;
+            }
+    }
+
+    .items_active{
+        transform: translateX(-5%);
+    }
+
+    @keyframes LinksActive{
+        from{
+            opacity: 0;
+            transform: translateX(400px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes LinksDestroy{
+        from{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        to{
+            opacity: 0;
+            transform: translateX(400px);
+        }
+    }

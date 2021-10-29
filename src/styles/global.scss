@@ -6,9 +6,36 @@
 	box-sizing: border-box;
 }
 
-body{
-	overflow-x: hidden;
+html{
+	background-color:#22262b;
 }
+
+
+
+
+
+
+body{
+	overflow: hidden;
+	//background-color:#22262b;
+	width: 100%;
+	height: 100vh;
+}
+
+.loader{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+
+		div{
+			position: absolute;
+			top: 50%;
+			left: 44%;
+			transform: translate(-50%, -50%);
+		}
+
+}
+
 
 $mainblack: #22262b;
 $amain: #fbb053;
@@ -17,17 +44,38 @@ $display: #abadc6;
 $item: #d1c9bf;
 $codred: #ac5e47;
 
-.main-container{
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
+.master_div{
 	height: 100vh;
 	width: 100vw;
-	article{
+	overflow: hidden;
+	
+	.main-container{
+		scroll-snap-type: y mandatory;
+		overflow-y: scroll;
+		overflow-x: hidden;
 		height: 100vh;
-		scroll-snap-align: start;
+		width: 100vw;
+		padding-right: 17px;
+    	box-sizing: content-box;
+		article{
+			height: 100vh;
+			scroll-snap-align: start;
+		}
+	
 	}
+
+}
+::-webkit-scrollbar{
+	width: 0;
+	display: none;
 }
 
+::-webkit-scrollbar-thumb {
+	background: green;
+}
+
+
+@import 'layout/nav';
 @import 'intro/intro';
 @import 'about/about';
 @import 'work/computer';

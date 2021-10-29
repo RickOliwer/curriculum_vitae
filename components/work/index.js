@@ -14,7 +14,7 @@ import {
 const Work = ({fields}) => {
   const [ref, inView] = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.8,
     triggerOnce: false
   });
 
@@ -59,8 +59,8 @@ const Work = ({fields}) => {
   };
     return (
       
-      <article className="article w-11/12 m-auto h-screen">
-        <h3 className="text-gray-500">project #{fields.int}</h3>
+      <article className="article w-11/12 m-auto h-screen relative">
+        <h3 className="text-gray-500 absolute top-10">project #{fields.int}</h3>
         <div className="w-full h-screen grid grid-cols-3">
           <section className="col-span-1 flex flex-col justify-center align-center info">
             <motion.div
@@ -68,7 +68,7 @@ const Work = ({fields}) => {
               variants={infoVariants}
               
               ref={ref}
-              className=""
+              className="info_contant"
             >
 
             <Info {...fields}/>

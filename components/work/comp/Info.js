@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 const Info = ({ Name, description, built_in, git_repo, website_url }) => {
-    console.log('my website', website_url);
     return (
         <div className="text-white">
             <h2 className="text-8xl">{Name}</h2>
