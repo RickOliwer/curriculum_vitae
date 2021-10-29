@@ -2,7 +2,7 @@ import Loader from '../components/Loader'
 import About from '../components/about'
 import Education from '../components/education'
 import Experiences from '../components/experiences'
-import Intro from '../components/Intro'
+import Intro from '../components/intro'
 import Skills from '../components/skills'
 import Work from '../components/work'
 import { myWorks } from '../utils/SwrFetcher'
@@ -10,7 +10,7 @@ import { myWorks } from '../utils/SwrFetcher'
 
 export default function Home() {
   const works = myWorks()
-  if (!works) return <Loader/>
+  if (!works) return <Loader/> 
 
   return (
     
