@@ -46,7 +46,7 @@ const Header = () => {
                         <Link href="#projects">projects.</Link>
                     </li>
                     <li className="ml-20 hover:text-gray-500" ref={(e) => createLinksRefs(e, 4)} >
-                        <Link href="#exeperiences">exeperiences.</Link>
+                        <Link href="#exeperiences">experiences.</Link>
                     </li>
                     <li className="ml-20 hover:text-gray-500" ref={(e) => createLinksRefs(e, 5)} >
                         <Link href="#education">education.</Link>
